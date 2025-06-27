@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <title>Displacement</title>
+  </head>
+  <body>
+    <a-scene fog="type: exponential">
+      <a-assets>
+        <img id="moon" src="https://cdn.glitch.com/658885b7-a140-4996-9747-31fa43b61a3c%2Fldem_3_8bit.jpg?v=1597154543519" />
+        <img id="moon_displacement" src="https://cdn.glitch.com/658885b7-a140-4996-9747-31fa43b61a3c%2Fldem_3_8bit.jpg?v=1597154543519" />
+        <img id="sky" src="https://cdn.glitch.com/658885b7-a140-4996-9747-31fa43b61a3c%2Fstarglobe_equirectangular_reversed_16x8k.jpg?v=1597240460169">
+      </a-assets>
+  
+      <a-sphere 
+        src="#moon" 
+        displacement-map="#moon_displacement" 
+        displacement-bias="0.5"
+        displacement-scale="0.12"            
+        segments-height="128"
+        segments-width="128"
+        position="0 2 -6" 
+        rotation="0 45 45"
+        scale="2 2 2"
+        >
+     
+    <a-sky src="#sky"></a-sky>
+  </body>
+</html>
